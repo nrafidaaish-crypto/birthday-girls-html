@@ -9,13 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Great+Vibes&family=Mali:ital,wght@0,400;0,600;0,700;1,500;1,600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
 <style>
   :root{
-    /* Warna gradasi background utama */
     --bg-grad-1: #f3d7ea;
     --bg-grad-2: #f79eb5;
     --bg-grad-3: #fce2eb;
     --bg-grad-4: #faeff7;
     
-    /* Warna Akses & Maroon & Pink */
     --pink-mid: #e25c93;
     --pink-soft: #f79eb5;
     --maroon: #7a0c2e;
@@ -26,10 +24,9 @@
     --white: #ffffff;
     --blue-dark: #826eab;
 
-    /* Font Definitions */
-    --font-valentine: 'Mali', cursive, sans-serif; /* Font Cute Valentine */
+    --font-valentine: 'Mali', cursive, sans-serif;
     --font-elegant: 'Playfair Display', serif;
-    --font-love: 'Great Vibes', cursive; /* Font Elegan "Love" */
+    --font-love: 'Great Vibes', cursive;
   }
 
   *{ box-sizing: border-box; }
@@ -46,7 +43,7 @@
 
   body.locked{ overflow: hidden; height: 100vh; }
 
-  /* ---------- CORNER DECORATIONS (BUNGA & KUPU-KUPU) ---------- */
+  /* ---------- CORNER DECORATIONS ---------- */
   .corner-decor{
     position: absolute;
     pointer-events: none;
@@ -118,7 +115,6 @@
     50%{ opacity: 1; transform: scale(1.1); }
   }
   
-  /* Container Kado Foto */
   .gift{
     width: 130px;
     height: 130px;
@@ -361,7 +357,7 @@
     position: relative;
     width: 260px;
     height: 180px;
-    margin: 0 auto 30px;
+    margin: 0 auto;
     opacity: 0;
     animation: fadeUp 0.7s ease forwards;
     animation-delay: 0.45s;
@@ -404,7 +400,7 @@
     z-index: 1;
   }
 
-  /* Surat Meliuk-Liuk / Scalloped Edge (Foto 4) */
+  /* Surat Bergerigi */
   .envelope-letter{
     position: absolute;
     left: 10px;
@@ -417,11 +413,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end; /* Teks dikebawahin */
-    padding: 30px 16px 28px;
+    justify-content: center;
+    padding: 20px 16px;
     transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), top 0.8s ease;
 
-    /* Efek Meliuk-Liuk / Scalloped Edge Border */
+    /* Efek Bergerigi / Scalloped Edge */
     --g: #0000 98%,#000;
     --s: 12px 12px;
     -webkit-mask:
@@ -444,21 +440,14 @@
     z-index: 10;
   }
 
-  /* Font Elegan untuk Tulisan Amplop (Foto 5) */
   .letter-header-text{
     font-family: var(--font-love);
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 500;
     color: var(--maroon);
     line-height: 1.2;
     text-transform: capitalize;
-    margin-bottom: 4px;
-  }
-  .letter-to-text{
-    font-family: var(--font-valentine);
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--maroon-light);
+    margin: 0;
   }
 
   .envelope-seal{
@@ -485,6 +474,7 @@
     transform: translate(-50%, -50%) scale(0.4);
   }
 
+  /* Posisikan teks petunjuk agar lebih ke bawah */
   .env-hint{
     font-family: var(--font-valentine);
     font-size: 15px;
@@ -493,6 +483,7 @@
     opacity: 0;
     animation: fadeUp 0.7s ease forwards;
     animation-delay: 0.6s;
+    margin-top: 55px; /* Memberi jarak lebih luas dari bawah amplop */
   }
   .env-hint.tap-again{ font-weight: 700; color: var(--maroon-light); }
 
@@ -574,7 +565,6 @@
     position: relative;
   }
 
-  /* FONT DALAM KARTU UCAPAN (TIDAK DIUBAH SAMA SEKALI) */
   .card p{
     font-family: 'Mali', 'Fredoka', cursive, sans-serif;
     font-size: 16px;
@@ -618,7 +608,7 @@
 </head>
 <body class="locked">
 
-<!-- ============ BACKSOUND ============ -->
+<!-- BACKSOUND -->
 <audio id="bgm" loop preload="auto">
   <source src="audio/dancingqueen.mp3" type="audio/mpeg">
 </audio>
@@ -626,7 +616,6 @@
 
 <!-- INTRO -->
 <div id="intro">
-  <!-- Dekorasi Bunga & Kupu-Kupu Sudut -->
   <div class="corner-decor top-left">🌸 🦋</div>
   <div class="corner-decor top-right">🦋 🌷</div>
   <div class="corner-decor bottom-left">🌺 🦋</div>
@@ -637,7 +626,6 @@
   <span class="intro-sparkle" style="bottom:22%; left:18%; animation-delay:1.1s;">🎀</span>
   <span class="intro-sparkle" style="bottom:26%; right:16%; animation-delay:0.3s;">✨</span>
   
-  <!-- Kotak Hadiah Berbentuk Gambar (bisa diganti foto/file kamu) -->
   <div class="gift" id="giftBtn">
     <img src="kado.png" alt="Kado" id="giftImg">
   </div>
@@ -651,7 +639,6 @@
 
 <!-- GAME SCREEN -->
 <div id="gameScreen" class="hidden">
-  <!-- Dekorasi Bunga & Kupu-Kupu Sudut -->
   <div class="corner-decor top-left">🌸 🦋</div>
   <div class="corner-decor top-right">🦋 🌷</div>
   <div class="corner-decor bottom-left">🌺 🦋</div>
@@ -668,9 +655,8 @@
   <p class="game-hint">makin cepet diketuk makin cepet suratnya muncul 🤍</p>
 </div>
 
-<!-- ENVELOPE / OPEN-LETTER SCREEN -->
+<!-- ENVELOPE SCREEN -->
 <div id="envelopeScreen" class="hidden">
-  <!-- Dekorasi Bunga & Kupu-Kupu Sudut -->
   <div class="corner-decor top-left">🌸 🦋</div>
   <div class="corner-decor top-right">🦋 🌷</div>
   <div class="corner-decor bottom-left">🌺 🦋</div>
@@ -679,10 +665,8 @@
   <p class="env-eyebrow">horeee, 15 balon udah abis!</p>
   <p class="env-title">ada surat buat kamu 💌</p>
   <div class="envelope-wrap" id="envelopeWrap">
-    <!-- Surat Meliuk-Liuk dengan Tulisan Elegan -->
     <div class="envelope-letter">
       <div class="letter-header-text">a love letter for the beautiful girl</div>
-      <div class="letter-to-text">buat mba cantik🤍</div>
     </div>
     <div class="envelope-shadow-tri"></div>
     <div class="envelope-body"></div>
@@ -694,7 +678,6 @@
 
 <!-- MAIN MESSAGE -->
 <main id="mainContent">
-  <!-- Dekorasi Bunga & Kupu-Kupu Sudut -->
   <div class="corner-decor top-left">🌸 🦋</div>
   <div class="corner-decor top-right">🦋 🌷</div>
   <div class="corner-decor bottom-left">🌺 🦋</div>
@@ -723,7 +706,7 @@
 </main>
 
 <script>
-  // ---------- BACKSOUND ----------
+  // BACKSOUND
   const bgm = document.getElementById('bgm');
   const musicToggle = document.getElementById('musicToggle');
   let musicOn = true;
@@ -759,7 +742,7 @@
     musicOn = !musicOn;
   });
 
-  // ---------- INTRO ----------
+  // INTRO
   const intro = document.getElementById('intro');
   const gameScreen = document.getElementById('gameScreen');
 
@@ -775,7 +758,7 @@
   document.getElementById('giftBtn').addEventListener('click', openGift);
   document.getElementById('openBtn').addEventListener('click', openGift);
 
-  // ---------- FLOATING DECOR ----------
+  // FLOATING DECOR
   const floaty = document.getElementById('floaty');
   const decorItems = ['🎈','💗','🎀','✨','🤍','🌸','🦋'];
   for(let i=0;i<16;i++){
@@ -789,7 +772,7 @@
     floaty.appendChild(el);
   }
 
-  // ---------- CONFETTI ----------
+  // CONFETTI
   function burstConfetti(n){
     const colors = ['#f3d7ea','#f79eb5','#7a0c2e','#a81d39','#ffffff'];
     for(let i=0;i<n;i++){
@@ -804,7 +787,7 @@
     }
   }
 
-  // ---------- GAME: 15 BALON ----------
+  // GAME
   const stage = document.getElementById('gameStage');
   const poppedEl = document.getElementById('popped');
   const progressFill = document.getElementById('progressFill');
@@ -867,7 +850,7 @@
     }, 700);
   }
 
-  // ---------- ENVELOPE ----------
+  // ENVELOPE
   const envelopeScreen = document.getElementById('envelopeScreen');
   const envelopeWrap = document.getElementById('envelopeWrap');
   const envHint = document.getElementById('envHint');
