@@ -5,20 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday, Mba Rosy Cantikk🤍</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Fredoka:wght@600;700&family=Mali:ital,wght@0,500;0,600;0,700;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Great+Vibes&family=Mali:ital,wght@0,500;0,600;0,700;1,600&family=Nunito:ital,wght@0,500;0,600;0,700;1,600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
 <style>
   :root{
-    /* Warna gradasi terang & soft */
+    /* Warna gradasi background utama (TIDAK DIUBAH) */
     --bg-grad-1: #f3d7ea;
     --bg-grad-2: #f79eb5;
     --bg-grad-3: #fce2eb;
     --bg-grad-4: #faeff7;
     
+    /* Warna Akses & Maroon & Pink */
     --pink-mid: #e25c93;
-    --text-dark: #4a3e56;
+    --pink-soft: #f79eb5;
+    --maroon: #7a0c2e;
+    --maroon-dark: #4a0318;
+    --maroon-light: #a81d39;
+    --text-dark: #3a2e39;
     --cream: #fffdfa;
     --white: #ffffff;
     --blue-dark: #826eab;
+
+    /* Font Definitions */
+    --font-cute: 'Nunito', sans-serif;
+    --font-elegant: 'Playfair Display', serif;
+    --font-script: 'Charm', cursive;
   }
 
   *{ box-sizing: border-box; }
@@ -28,12 +39,31 @@
     padding: 0;
     min-height: 100%;
     background: linear-gradient(150deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 38%, var(--bg-grad-3) 72%, var(--bg-grad-4) 100%) fixed;
-    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
+    font-family: var(--font-cute);
     color: var(--text-dark);
     overflow-x: hidden;
   }
 
   body.locked{ overflow: hidden; height: 100vh; }
+
+  /* ---------- CORNER DECORATIONS (BUNGA & KUPU-KUPU) ---------- */
+  .corner-decor{
+    position: absolute;
+    pointer-events: none;
+    z-index: 15;
+    font-size: 22px;
+    filter: drop-shadow(0 3px 6px rgba(122, 12, 46, 0.2));
+    animation: floatDecor 3s ease-in-out infinite alternate;
+  }
+  .corner-decor.top-left{ top: 16px; left: 16px; }
+  .corner-decor.top-right{ top: 16px; right: 16px; }
+  .corner-decor.bottom-left{ bottom: 16px; left: 16px; }
+  .corner-decor.bottom-right{ bottom: 16px; right: 16px; }
+
+  @keyframes floatDecor {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-6px) rotate(5deg); }
+  }
 
   /* ---------- MUSIC TOGGLE ---------- */
   #musicToggle{
@@ -41,12 +71,12 @@
     top: 16px;
     right: 16px;
     z-index: 60;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    border: none;
-    background: var(--white);
-    box-shadow: 0 10px 20px rgba(74,62,86,0.15), inset 0 1px 2px #fff, inset 0 -2px 4px rgba(0,0,0,0.05);
+    border: 2px solid var(--maroon-light);
+    background: linear-gradient(135deg, #ffffff 0%, #fce2eb 100%);
+    box-shadow: 0 8px 18px rgba(122, 12, 46, 0.25);
     font-size: 18px;
     cursor: pointer;
     display: flex;
@@ -56,7 +86,7 @@
     transition: opacity 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
   #musicToggle.show{ opacity: 1; }
-  #musicToggle:active{ transform: scale(0.9); box-shadow: 0 4px 10px rgba(74,62,86,0.15); }
+  #musicToggle:active{ transform: scale(0.9); box-shadow: 0 4px 10px rgba(122, 12, 46, 0.2); }
 
   /* ---------- INTRO SCREEN ---------- */
   #intro{
@@ -91,43 +121,45 @@
     font-size: 78px;
     animation: bounce 1.6s ease-in-out infinite;
     cursor: pointer;
-    filter: drop-shadow(0 18px 22px rgba(74,62,86,0.25)) drop-shadow(0 4px 6px rgba(0,0,0,0.08));
+    filter: drop-shadow(0 18px 22px rgba(122, 12, 46, 0.3));
   }
   @keyframes bounce{
     0%, 100%{ transform: translateY(0) rotate(-3deg); }
     50%{ transform: translateY(-14px) rotate(3deg); }
   }
   .intro-text{
-    font-family: 'Fredoka', cursive;
-    font-size: 28px;
-    color: var(--text-dark);
+    font-family: var(--font-elegant);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--maroon);
     margin: 18px 0 4px;
-    max-width: 320px;
+    max-width: 340px;
     text-shadow: 0 2px 6px rgba(255,255,255,0.8);
   }
   .intro-sub{
-    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
-    font-size: 17px;
-    font-weight: 700;
-    color: rgba(74,62,86,0.9);
-    margin-bottom: 22px;
-    text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+    font-family: var(--font-cute);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--maroon-dark);
+    margin-bottom: 24px;
+    opacity: 0.9;
   }
   .intro-btn{
-    background: var(--text-dark);
+    background: linear-gradient(135deg, var(--maroon-light) 0%, var(--maroon) 50%, var(--maroon-dark) 100%);
     color: var(--cream);
-    border: none;
-    padding: 12px 26px;
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 14px 32px;
     border-radius: 999px;
-    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
+    font-family: var(--font-elegant);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 17px;
     letter-spacing: 0.5px;
     cursor: pointer;
-    box-shadow: 0 12px 24px rgba(74,62,86,0.2), inset 0 2px 2px rgba(255,255,255,0.3), inset 0 -3px 0 rgba(0,0,0,0.2);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 12px 25px rgba(122, 12, 46, 0.35), inset 0 2px 2px rgba(255,255,255,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
-  .intro-btn:active{ transform: scale(0.94); box-shadow: 0 6px 12px rgba(74,62,86,0.2); }
+  .intro-btn:hover { transform: translateY(-2px); box-shadow: 0 15px 28px rgba(122, 12, 46, 0.45); }
+  .intro-btn:active{ transform: scale(0.95); box-shadow: 0 6px 12px rgba(122, 12, 46, 0.3); }
 
   /* ---------- FLOATING BG DECOR ---------- */
   .floaty{
@@ -184,26 +216,25 @@
   #gameScreen.hidden{ display: none; }
 
   .game-eyebrow{
-    font-family: 'Lobster Two', cursive;
-    font-size: 20px;
-    color: var(--pink-mid);
+    font-family: var(--font-cute);
+    font-size: 16px;
+    color: var(--maroon);
     font-weight: 700;
     margin-bottom: 4px;
-    text-shadow: 0 1px 2px rgba(255,255,255,0.9);
   }
   .game-title{
-    font-family: 'Fredoka', cursive;
+    font-family: var(--font-elegant);
     font-size: 28px;
-    color: var(--text-dark);
-    margin: 0 0 4px;
+    font-weight: 700;
+    color: var(--maroon);
+    margin: 0 0 6px;
     text-shadow: 0 2px 4px rgba(255,255,255,0.9);
   }
   .game-sub{
-    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
-    font-size: 16px;
-    color: rgba(74,62,86,0.85);
+    font-family: var(--font-cute);
+    font-size: 15px;
+    color: var(--text-dark);
     margin: 0 0 16px;
-    text-shadow: 0 1px 2px rgba(255,255,255,0.9);
   }
   #gameStage{
     position: relative;
@@ -212,8 +243,8 @@
     background: var(--cream);
     border-radius: 20px;
     overflow: hidden;
-    border: 1.5px dashed var(--pink-mid);
-    box-shadow: 0 20px 40px rgba(74,62,86,0.12), inset 0 6px 16px rgba(74,62,86,0.05), inset 0 -2px 6px rgba(255,255,255,0.8);
+    border: 2px dashed var(--maroon-light);
+    box-shadow: 0 20px 40px rgba(122, 12, 46, 0.15), inset 0 6px 16px rgba(0,0,0,0.03);
   }
   .balloon{
     position: absolute;
@@ -223,7 +254,7 @@
     user-select: none;
     animation: floatUp linear forwards;
     transition: transform 0.15s ease;
-    filter: drop-shadow(0 6px 8px rgba(74,62,86,0.2));
+    filter: drop-shadow(0 6px 8px rgba(0,0,0,0.15));
   }
   .balloon:active{ transform: scale(1.3); }
   @keyframes floatUp{
@@ -232,13 +263,12 @@
   }
   .pop-msg{
     position: absolute;
-    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
+    font-family: var(--font-cute);
     font-size: 15px;
     font-weight: 700;
-    color: var(--pink-mid);
+    color: var(--maroon);
     pointer-events: none;
     animation: popFade 0.7s ease forwards;
-    text-shadow: 0 1px 3px rgba(255,255,255,0.9);
   }
   @keyframes popFade{
     from{ opacity: 1; transform: translateY(0) scale(1); }
@@ -248,36 +278,35 @@
   .progress-bar{
     width: 100%;
     height: 12px;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.8);
     border-radius: 999px;
     overflow: hidden;
-    box-shadow: inset 0 2px 4px rgba(74,62,86,0.1), 0 2px 6px rgba(255,255,255,0.8);
+    border: 1px solid rgba(122, 12, 46, 0.15);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
   }
   .progress-fill{
     height: 100%;
     width: 0%;
-    background: linear-gradient(90deg, var(--blue-dark), var(--pink-mid));
+    background: linear-gradient(90deg, var(--pink-mid), var(--maroon));
     border-radius: 999px;
     transition: width 0.25s ease;
-    box-shadow: inset 0 1px 2px rgba(255,255,255,0.5);
   }
   .progress-label{
-    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
-    font-size: 16px;
+    font-family: var(--font-cute);
+    font-size: 15px;
     font-weight: 700;
     margin-top: 6px;
-    color: var(--text-dark);
-    text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+    color: var(--maroon);
   }
   .game-hint{
-    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
-    font-size: 15px;
-    color: rgba(74,62,86,0.75);
+    font-family: var(--font-cute);
+    font-size: 14px;
+    color: var(--text-dark);
     margin-top: 10px;
-    text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+    opacity: 0.85;
   }
 
-  /* ---------- ENVELOPE SCREEN ---------- */
+  /* ---------- ENVELOPE SCREEN (MAROON & ELEGANT) ---------- */
   #envelopeScreen{
     position: relative;
     z-index: 1;
@@ -294,109 +323,136 @@
   #envelopeScreen.hidden{ display: none; }
 
   .env-eyebrow{
-    font-family: 'Lobster Two', cursive;
-    font-size: 20px;
-    color: var(--pink-mid);
+    font-family: var(--font-cute);
+    font-size: 16px;
+    color: var(--maroon);
     font-weight: 700;
     margin-bottom: 4px;
     opacity: 0;
     animation: fadeUp 0.7s ease forwards;
     animation-delay: 0.15s;
-    text-shadow: 0 1px 2px rgba(255,255,255,0.9);
   }
   .env-title{
-    font-family: 'Fredoka', cursive;
-    font-size: 28px;
-    color: var(--text-dark);
-    margin: 0 0 26px;
+    font-family: var(--font-elegant);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--maroon);
+    margin: 0 0 28px;
     opacity: 0;
     animation: fadeUp 0.7s ease forwards;
     animation-delay: 0.3s;
     text-shadow: 0 2px 4px rgba(255,255,255,0.9);
   }
+
+  /* Envelope Maroon Container */
   .envelope-wrap{
     position: relative;
-    width: 210px;
-    height: 150px;
-    margin: 0 auto 26px;
+    width: 250px;
+    height: 170px;
+    margin: 0 auto 30px;
     opacity: 0;
     animation: fadeUp 0.7s ease forwards;
     animation-delay: 0.45s;
     cursor: pointer;
-    filter: drop-shadow(0 18px 25px rgba(74,62,86,0.18));
+    filter: drop-shadow(0 18px 25px rgba(74, 3, 24, 0.3));
   }
   .envelope-body{
     position: absolute;
     inset: 0;
-    top: 24px;
-    background: var(--white);
-    border-radius: 10px;
-    box-shadow: 0 12px 24px rgba(74,62,86,0.1), inset 0 1px 2px rgba(255,255,255,0.9);
+    top: 30px;
+    background: linear-gradient(145deg, var(--maroon) 0%, var(--maroon-dark) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 12px 24px rgba(74, 3, 24, 0.25);
   }
   .envelope-flap{
     position: absolute;
-    top: 24px;
+    top: 30px;
     left: 0;
     width: 100%;
-    height: 78px;
-    background: #fce1ec;
+    height: 85px;
+    background: linear-gradient(180deg, var(--maroon-light) 0%, var(--maroon) 100%);
     clip-path: polygon(0 0, 100% 0, 50% 68%);
-    border-radius: 10px 10px 0 0;
+    border-radius: 12px 12px 0 0;
     transform-origin: top center;
     transition: transform 0.6s cubic-bezier(.5,-0.3,.5,1.3);
     z-index: 3;
-    filter: drop-shadow(0 2px 4px rgba(74,62,86,0.1));
+    border-top: 1px solid rgba(255,255,255,0.2);
   }
   .envelope-wrap.opened .envelope-flap{ transform: rotateX(180deg); }
+  
   .envelope-shadow-tri{
     position: absolute;
-    top: 24px;
+    top: 30px;
     left: 0;
     width: 100%;
-    height: 60px;
-    background: rgba(226,92,147,0.2);
+    height: 70px;
+    background: rgba(0, 0, 0, 0.2);
     clip-path: polygon(0 0, 100% 0, 50% 100%);
     z-index: 1;
   }
+
+  /* Surat bergaya Foto Pertama */
   .envelope-letter{
     position: absolute;
-    left: 12px;
-    right: 12px;
-    top: 20px;
-    height: 100px;
+    left: 10px;
+    right: 10px;
+    top: 18px;
+    height: 200px;
     background: var(--cream);
-    border-radius: 6px;
-    box-shadow: 0 8px 20px rgba(74,62,86,0.12), inset 0 1px 0 #fff;
+    border: 2px dashed var(--maroon-light);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     z-index: 2;
     display: flex;
-    align-items: flex-end; /* Posisi teks diturunkan ke area bawah kartu */
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding-bottom: 12px;
-    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
-    font-size: 19px;
-    font-weight: 700;
-    color: var(--pink-mid);
-    transition: transform 0.7s ease 0.25s, top 0.7s ease 0.25s;
+    padding: 16px;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), top 0.8s ease;
   }
   .envelope-wrap.opened .envelope-letter{
-    top: -70px;
-    transform: translateY(-10px) scale(1.03);
+    top: -140px;
+    transform: translateY(-20px) scale(1.05);
+    z-index: 10;
   }
+
+  .letter-header-text{
+    font-family: var(--font-elegant);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--maroon);
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .letter-to-text{
+    font-family: var(--font-cute);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--maroon-light);
+    margin-bottom: 8px;
+  }
+  .letter-stamp-icon{
+    font-size: 26px;
+    margin-bottom: 4px;
+  }
+
   .envelope-seal{
     position: absolute;
-    top: 62px;
+    top: 72px;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 34px;
-    height: 34px;
-    background: var(--pink-mid);
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, var(--maroon-light), var(--maroon-dark));
+    border: 1px solid rgba(255,255,255,0.4);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 16px;
     color: var(--cream);
-    box-shadow: 0 4px 10px rgba(74,62,86,0.25), inset 0 1px 2px rgba(255,255,255,0.4);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     z-index: 4;
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
@@ -404,16 +460,17 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.4);
   }
+
   .env-hint{
-    font-family: 'Lobster Two', cursive; /* Sama dengan font ucapan paling atas */
-    font-size: 18px;
-    color: rgba(74,62,86,0.85);
+    font-family: var(--font-cute);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--maroon);
     opacity: 0;
     animation: fadeUp 0.7s ease forwards;
     animation-delay: 0.6s;
-    text-shadow: 0 1px 2px rgba(255,255,255,0.8);
   }
-  .env-hint.tap-again{ font-weight: 700; color: var(--pink-mid); }
+  .env-hint.tap-again{ font-weight: 700; color: var(--maroon-light); }
 
   /* ---------- MAIN CONTENT ---------- */
   main{
@@ -437,28 +494,28 @@
   }
 
   .eyebrow{
-    font-family: 'Lobster Two', cursive;
-    font-size: 22px;
-    color: var(--pink-mid);
+    font-family: var(--font-cute);
+    font-size: 16px;
+    color: var(--maroon);
     font-weight: 700;
-    text-shadow: 0 1px 2px rgba(255,255,255,0.9);
   }
 
   h1{
-    font-family: 'Fredoka', cursive;
-    font-size: 48px;
+    font-family: var(--font-elegant);
+    font-size: 46px;
     line-height: 1.15;
     margin: 6px 0 4px;
-    color: var(--pink-mid);
-    text-shadow: 0 4px 10px rgba(74,62,86,0.1), 0 2px 0 rgba(255,255,255,0.9);
+    color: var(--maroon);
+    text-shadow: 0 4px 10px rgba(122, 12, 46, 0.15), 0 2px 0 rgba(255,255,255,0.9);
   }
 
   .name{
-    font-family: 'Fredoka', cursive;
-    font-size: 36px;
-    color: var(--text-dark);
+    font-family: var(--font-elegant);
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--maroon-light);
     margin: 0 0 22px;
-    text-shadow: 0 3px 6px rgba(74,62,86,0.08), 0 1px 0 rgba(255,255,255,0.9);
+    text-shadow: 0 2px 4px rgba(255,255,255,0.9);
   }
 
   .frame-wrap{
@@ -470,7 +527,7 @@
     background: var(--white);
     padding: 10px 10px 26px;
     border-radius: 14px;
-    box-shadow: 0 22px 45px -10px rgba(74,62,86,0.18), 0 8px 18px -4px rgba(0,0,0,0.08), inset 0 1px 3px rgba(255,255,255,0.9);
+    box-shadow: 0 22px 45px -10px rgba(122, 12, 46, 0.2), 0 8px 18px -4px rgba(0,0,0,0.08);
     transform: rotate(-3deg);
   }
   .frame img{
@@ -480,7 +537,6 @@
     aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: 50% 25%;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.08);
   }
   .frame::after{
     content: "🤍";
@@ -488,21 +544,21 @@
     bottom: -6px;
     right: -6px;
     font-size: 26px;
-    filter: drop-shadow(0 4px 6px rgba(74,62,86,0.18));
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
   }
   .sticker{
     position: absolute;
     top: -14px;
     left: -14px;
-    background: var(--blue-dark);
+    background: linear-gradient(135deg, var(--maroon-light), var(--maroon));
     color: var(--white);
-    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
+    font-family: var(--font-cute);
     font-weight: 700;
-    font-size: 14px;
-    padding: 6px 10px;
+    font-size: 13px;
+    padding: 6px 12px;
     border-radius: 999px;
     transform: rotate(-8deg);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.15), inset 0 1px 1px rgba(255,255,255,0.4);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
   }
 
   .card{
@@ -510,11 +566,12 @@
     border-radius: 22px;
     padding: 26px 22px 24px;
     text-align: left;
-    box-shadow: 0 25px 50px -10px rgba(74,62,86,0.15), 0 10px 20px -5px rgba(0,0,0,0.05), inset 0 2px 4px rgba(255,255,255,0.9);
+    box-shadow: 0 25px 50px -10px rgba(122, 12, 46, 0.18), 0 10px 20px -5px rgba(0,0,0,0.05);
     border: 1px solid rgba(255,255,255,0.9);
     position: relative;
   }
-  /* Menggunakan font Valentine (Sweety Rasty) */
+
+  /* FONT DALAM KARTU UCAPAN (TIDAK DIUBAH SAMA SEKALI) */
   .card p{
     font-family: 'Mali', 'Fredoka', cursive, sans-serif;
     font-size: 16px;
@@ -527,30 +584,28 @@
   .quote-mark{
     font-family: 'Caveat', cursive;
     font-size: 54px;
-    color: var(--pink-mid);
+    color: var(--maroon-light);
     line-height: 0;
     display: block;
     margin-bottom: 8px;
-    text-shadow: 0 2px 4px rgba(74,62,86,0.08);
   }
   .signoff{
     font-family: 'Mali', 'Fredoka', cursive, sans-serif;
     font-size: 18px;
     font-weight: 700;
-    color: var(--pink-mid);
+    color: var(--maroon-light);
     text-align: right;
     margin-top: 16px !important;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.05);
   }
 
   .footer-note{
     margin-top: 28px;
-    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
-    font-size: 15px;
-    color: rgba(74,62,86,0.75);
-    text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+    font-family: var(--font-cute);
+    font-size: 14px;
+    color: var(--text-dark);
+    opacity: 0.8;
   }
-  .footer-note span{ color: var(--pink-mid); }
+  .footer-note span{ color: var(--maroon-light); }
 
   @media (prefers-reduced-motion: reduce){
     *{ animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
@@ -568,6 +623,12 @@
 
 <!-- INTRO -->
 <div id="intro">
+  <!-- Dekorasi Bunga & Kupu-Kupu Sudut -->
+  <div class="corner-decor top-left">🌸 🦋</div>
+  <div class="corner-decor top-right">🦋 🌷</div>
+  <div class="corner-decor bottom-left">🌺 🦋</div>
+  <div class="corner-decor bottom-right">🦋 🌸</div>
+
   <span class="intro-sparkle" style="top:18%; left:15%;">✨</span>
   <span class="intro-sparkle" style="top:24%; right:14%; animation-delay:0.6s;">💗</span>
   <span class="intro-sparkle" style="bottom:22%; left:18%; animation-delay:1.1s;">🎀</span>
@@ -582,6 +643,12 @@
 
 <!-- GAME SCREEN -->
 <div id="gameScreen" class="hidden">
+  <!-- Dekorasi Bunga & Kupu-Kupu Sudut -->
+  <div class="corner-decor top-left">🌸 🦋</div>
+  <div class="corner-decor top-right">🦋 🌷</div>
+  <div class="corner-decor bottom-left">🌺 🦋</div>
+  <div class="corner-decor bottom-right">🦋 🌸</div>
+
   <p class="game-eyebrow">sebelum baca suratnya</p>
   <p class="game-title">pecahin 15 balon dulu yuk 🎈</p>
   <p class="game-sub">ketuk balonnya sampai abis, suratnya bakal kebuka otomatis</p>
@@ -595,10 +662,20 @@
 
 <!-- ENVELOPE / OPEN-LETTER SCREEN -->
 <div id="envelopeScreen" class="hidden">
+  <!-- Dekorasi Bunga & Kupu-Kupu Sudut -->
+  <div class="corner-decor top-left">🌸 🦋</div>
+  <div class="corner-decor top-right">🦋 🌷</div>
+  <div class="corner-decor bottom-left">🌺 🦋</div>
+  <div class="corner-decor bottom-right">🦋 🌸</div>
+
   <p class="env-eyebrow">horeee, 15 balon udah abis!</p>
   <p class="env-title">ada surat buat kamu 💌</p>
   <div class="envelope-wrap" id="envelopeWrap">
-    <div class="envelope-letter">buat mba cantik🤍</div>
+    <div class="envelope-letter">
+      <div class="letter-stamp-icon">💌</div>
+      <div class="letter-header-text">A LOVE LETTER</div>
+      <div class="letter-to-text">buat mba cantik🤍</div>
+    </div>
     <div class="envelope-shadow-tri"></div>
     <div class="envelope-body"></div>
     <div class="envelope-flap"></div>
@@ -609,6 +686,12 @@
 
 <!-- MAIN MESSAGE -->
 <main id="mainContent">
+  <!-- Dekorasi Bunga & Kupu-Kupu Sudut -->
+  <div class="corner-decor top-left">🌸 🦋</div>
+  <div class="corner-decor top-right">🦋 🌷</div>
+  <div class="corner-decor bottom-left">🌺 🦋</div>
+  <div class="corner-decor bottom-right">🦋 🌸</div>
+
   <p class="eyebrow fade-in" style="animation-delay:0.1s">buat kamu, hari ini</p>
   <h1 class="fade-in" style="animation-delay:0.25s">Happy Birthday</h1>
   <p class="name fade-in" style="animation-delay:0.4s">mbaa 🤍</p>
@@ -688,7 +771,7 @@
 
   // ---------- FLOATING DECOR ----------
   const floaty = document.getElementById('floaty');
-  const decorItems = ['🎈','💗','🎀','✨','🤍','🎈'];
+  const decorItems = ['🎈','💗','🎀','✨','🤍','🌸','🦋'];
   for(let i=0;i<16;i++){
     const el = document.createElement('span');
     el.textContent = decorItems[Math.floor(Math.random()*decorItems.length)];
@@ -702,7 +785,7 @@
 
   // ---------- CONFETTI ----------
   function burstConfetti(n){
-    const colors = ['#f3d7ea','#f79eb5','#fce2eb','#faeff7','#ffffff'];
+    const colors = ['#f3d7ea','#f79eb5','#7a0c2e','#a81d39','#ffffff'];
     for(let i=0;i<n;i++){
       const c = document.createElement('div');
       c.className = 'confetti';
@@ -802,7 +885,7 @@
       const mainEl = document.getElementById('mainContent');
       mainEl.classList.add('revealed');
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 1000);
+    }, 1200);
   });
 </script>
 
