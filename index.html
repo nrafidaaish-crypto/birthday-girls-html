@@ -8,17 +8,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Fredoka:wght@600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    /* Gradasi dari foto pertama: Soft Lilac, Rosy Pink, Pastel Lavender */
-    --bg-grad-1: #d8b8e8;
-    --bg-grad-2: #e8a0ca;
-    --bg-grad-3: #f47cae;
-    --bg-grad-4: #fbd5e5;
+    /* Warna gradasi terang & soft persis foto pertama */
+    --bg-grad-1: #f3d7ea; /* Soft light lavender-pink */
+    --bg-grad-2: #f79eb5; /* Coral pink pastel */
+    --bg-grad-3: #fce2eb; /* Soft blush pink */
+    --bg-grad-4: #faeff7; /* Light pastel white-pink */
     
-    --pink-mid: #d95b96;
+    --pink-mid: #e25c93;
     --text-dark: #4a3e56;
     --cream: #fffdfa;
     --white: #ffffff;
-    --blue-dark: #7a68a6;
+    --blue-dark: #826eab;
   }
 
   *{ box-sizing: border-box; }
@@ -27,8 +27,7 @@
     margin: 0;
     padding: 0;
     min-height: 100%;
-    background: linear-gradient(160deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 35%, var(--bg-grad-3) 70%, var(--bg-grad-4) 100%) fixed;
-    /* Font kecil/body menggunakan Vintage Moon (Charm) */
+    background: linear-gradient(150deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 38%, var(--bg-grad-3) 72%, var(--bg-grad-4) 100%) fixed;
     font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
     color: var(--text-dark);
     overflow-x: hidden;
@@ -47,7 +46,7 @@
     border-radius: 50%;
     border: none;
     background: var(--white);
-    box-shadow: 0 10px 20px rgba(74,62,86,0.2), inset 0 1px 2px #fff, inset 0 -2px 4px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 20px rgba(74,62,86,0.15), inset 0 1px 2px #fff, inset 0 -2px 4px rgba(0,0,0,0.05);
     font-size: 18px;
     cursor: pointer;
     display: flex;
@@ -57,7 +56,7 @@
     transition: opacity 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
   #musicToggle.show{ opacity: 1; }
-  #musicToggle:active{ transform: scale(0.9); box-shadow: 0 4px 10px rgba(74,62,86,0.2); }
+  #musicToggle:active{ transform: scale(0.9); box-shadow: 0 4px 10px rgba(74,62,86,0.15); }
 
   /* ---------- INTRO SCREEN ---------- */
   #intro{
@@ -68,7 +67,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(160deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 35%, var(--bg-grad-3) 70%, var(--bg-grad-4) 100%);
+    background: linear-gradient(150deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 38%, var(--bg-grad-3) 72%, var(--bg-grad-4) 100%);
     text-align: center;
     padding: 24px;
     transition: opacity 0.6s ease, visibility 0.6s ease;
@@ -82,7 +81,7 @@
     position: absolute;
     font-size: 20px;
     animation: twinkle 2.2s ease-in-out infinite;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
   }
   @keyframes twinkle{
     0%, 100%{ opacity: 0.3; transform: scale(0.8); }
@@ -92,7 +91,7 @@
     font-size: 78px;
     animation: bounce 1.6s ease-in-out infinite;
     cursor: pointer;
-    filter: drop-shadow(0 18px 22px rgba(74,62,86,0.35)) drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    filter: drop-shadow(0 18px 22px rgba(74,62,86,0.25)) drop-shadow(0 4px 6px rgba(0,0,0,0.08));
   }
   @keyframes bounce{
     0%, 100%{ transform: translateY(0) rotate(-3deg); }
@@ -104,7 +103,7 @@
     color: var(--text-dark);
     margin: 18px 0 4px;
     max-width: 320px;
-    text-shadow: 0 2px 6px rgba(255,255,255,0.7), 0 1px 2px rgba(74,62,86,0.15);
+    text-shadow: 0 2px 6px rgba(255,255,255,0.8);
   }
   .intro-sub{
     font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
@@ -125,10 +124,10 @@
     font-size: 16px;
     letter-spacing: 0.5px;
     cursor: pointer;
-    box-shadow: 0 12px 24px rgba(74,62,86,0.3), inset 0 2px 2px rgba(255,255,255,0.3), inset 0 -3px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 12px 24px rgba(74,62,86,0.2), inset 0 2px 2px rgba(255,255,255,0.3), inset 0 -3px 0 rgba(0,0,0,0.2);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
-  .intro-btn:active{ transform: scale(0.94); box-shadow: 0 6px 12px rgba(74,62,86,0.25); }
+  .intro-btn:active{ transform: scale(0.94); box-shadow: 0 6px 12px rgba(74,62,86,0.2); }
 
   /* ---------- FLOATING BG DECOR ---------- */
   .floaty{
@@ -144,7 +143,7 @@
     font-size: 22px;
     opacity: 0.75;
     animation: rise linear infinite;
-    filter: drop-shadow(0 4px 6px rgba(74,62,86,0.2));
+    filter: drop-shadow(0 4px 6px rgba(74,62,86,0.15));
   }
   @keyframes rise{
     0%{ transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
@@ -161,7 +160,7 @@
     pointer-events: none;
     animation: fall 3.2s ease-in forwards;
     border-radius: 2px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
   @keyframes fall{
     to{ transform: translateY(105vh) rotate(540deg); opacity: 0.2; }
@@ -190,21 +189,21 @@
     color: var(--pink-mid);
     font-weight: 700;
     margin-bottom: 4px;
-    text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+    text-shadow: 0 1px 2px rgba(255,255,255,0.9);
   }
   .game-title{
     font-family: 'Fredoka', cursive;
     font-size: 28px;
     color: var(--text-dark);
     margin: 0 0 4px;
-    text-shadow: 0 2px 4px rgba(255,255,255,0.8), 0 1px 2px rgba(74,62,86,0.12);
+    text-shadow: 0 2px 4px rgba(255,255,255,0.9);
   }
   .game-sub{
     font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
     font-size: 16px;
     color: rgba(74,62,86,0.85);
     margin: 0 0 16px;
-    text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+    text-shadow: 0 1px 2px rgba(255,255,255,0.9);
   }
   #gameStage{
     position: relative;
@@ -214,7 +213,7 @@
     border-radius: 20px;
     overflow: hidden;
     border: 1.5px dashed var(--pink-mid);
-    box-shadow: 0 20px 40px rgba(74,62,86,0.18), inset 0 6px 16px rgba(74,62,86,0.1), inset 0 -2px 6px rgba(255,255,255,0.8);
+    box-shadow: 0 20px 40px rgba(74,62,86,0.12), inset 0 6px 16px rgba(74,62,86,0.05), inset 0 -2px 6px rgba(255,255,255,0.8);
   }
   .balloon{
     position: absolute;
@@ -224,7 +223,7 @@
     user-select: none;
     animation: floatUp linear forwards;
     transition: transform 0.15s ease;
-    filter: drop-shadow(0 6px 8px rgba(74,62,86,0.25));
+    filter: drop-shadow(0 6px 8px rgba(74,62,86,0.2));
   }
   .balloon:active{ transform: scale(1.3); }
   @keyframes floatUp{
@@ -249,10 +248,10 @@
   .progress-bar{
     width: 100%;
     height: 12px;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.7);
     border-radius: 999px;
     overflow: hidden;
-    box-shadow: inset 0 2px 4px rgba(74,62,86,0.15), 0 2px 6px rgba(255,255,255,0.8);
+    box-shadow: inset 0 2px 4px rgba(74,62,86,0.1), 0 2px 6px rgba(255,255,255,0.8);
   }
   .progress-fill{
     height: 100%;
@@ -303,7 +302,7 @@
     opacity: 0;
     animation: fadeUp 0.7s ease forwards;
     animation-delay: 0.15s;
-    text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+    text-shadow: 0 1px 2px rgba(255,255,255,0.9);
   }
   .env-title{
     font-family: 'Fredoka', cursive;
@@ -313,7 +312,7 @@
     opacity: 0;
     animation: fadeUp 0.7s ease forwards;
     animation-delay: 0.3s;
-    text-shadow: 0 2px 4px rgba(255,255,255,0.8), 0 1px 2px rgba(74,62,86,0.12);
+    text-shadow: 0 2px 4px rgba(255,255,255,0.9);
   }
   .envelope-wrap{
     position: relative;
@@ -324,7 +323,7 @@
     animation: fadeUp 0.7s ease forwards;
     animation-delay: 0.45s;
     cursor: pointer;
-    filter: drop-shadow(0 18px 25px rgba(74,62,86,0.25));
+    filter: drop-shadow(0 18px 25px rgba(74,62,86,0.18));
   }
   .envelope-body{
     position: absolute;
@@ -332,7 +331,7 @@
     top: 24px;
     background: var(--white);
     border-radius: 10px;
-    box-shadow: 0 12px 24px rgba(74,62,86,0.15), inset 0 1px 2px rgba(255,255,255,0.9);
+    box-shadow: 0 12px 24px rgba(74,62,86,0.1), inset 0 1px 2px rgba(255,255,255,0.9);
   }
   .envelope-flap{
     position: absolute;
@@ -346,7 +345,7 @@
     transform-origin: top center;
     transition: transform 0.6s cubic-bezier(.5,-0.3,.5,1.3);
     z-index: 3;
-    filter: drop-shadow(0 2px 4px rgba(74,62,86,0.15));
+    filter: drop-shadow(0 2px 4px rgba(74,62,86,0.1));
   }
   .envelope-wrap.opened .envelope-flap{ transform: rotateX(180deg); }
   .envelope-shadow-tri{
@@ -355,7 +354,7 @@
     left: 0;
     width: 100%;
     height: 60px;
-    background: rgba(217,91,150,0.25);
+    background: rgba(226,92,147,0.2);
     clip-path: polygon(0 0, 100% 0, 50% 100%);
     z-index: 1;
   }
@@ -367,7 +366,7 @@
     height: 100px;
     background: var(--cream);
     border-radius: 6px;
-    box-shadow: 0 8px 20px rgba(74,62,86,0.18), inset 0 1px 0 #fff;
+    box-shadow: 0 8px 20px rgba(74,62,86,0.12), inset 0 1px 0 #fff;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -396,7 +395,7 @@
     justify-content: center;
     font-size: 15px;
     color: var(--cream);
-    box-shadow: 0 4px 10px rgba(74,62,86,0.35), inset 0 1px 2px rgba(255,255,255,0.4);
+    box-shadow: 0 4px 10px rgba(74,62,86,0.25), inset 0 1px 2px rgba(255,255,255,0.4);
     z-index: 4;
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
@@ -441,7 +440,7 @@
     font-size: 22px;
     color: var(--pink-mid);
     font-weight: 700;
-    text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+    text-shadow: 0 1px 2px rgba(255,255,255,0.9);
   }
 
   h1{
@@ -450,7 +449,7 @@
     line-height: 1.15;
     margin: 6px 0 4px;
     color: var(--pink-mid);
-    text-shadow: 0 4px 10px rgba(74,62,86,0.15), 0 2px 0 rgba(255,255,255,0.8);
+    text-shadow: 0 4px 10px rgba(74,62,86,0.1), 0 2px 0 rgba(255,255,255,0.9);
   }
 
   .name{
@@ -458,7 +457,7 @@
     font-size: 36px;
     color: var(--text-dark);
     margin: 0 0 22px;
-    text-shadow: 0 3px 6px rgba(74,62,86,0.12), 0 1px 0 rgba(255,255,255,0.8);
+    text-shadow: 0 3px 6px rgba(74,62,86,0.08), 0 1px 0 rgba(255,255,255,0.9);
   }
 
   .frame-wrap{
@@ -470,7 +469,7 @@
     background: var(--white);
     padding: 10px 10px 26px;
     border-radius: 14px;
-    box-shadow: 0 22px 45px -10px rgba(74,62,86,0.3), 0 8px 18px -4px rgba(0,0,0,0.12), inset 0 1px 3px rgba(255,255,255,0.9);
+    box-shadow: 0 22px 45px -10px rgba(74,62,86,0.18), 0 8px 18px -4px rgba(0,0,0,0.08), inset 0 1px 3px rgba(255,255,255,0.9);
     transform: rotate(-3deg);
   }
   .frame img{
@@ -480,7 +479,7 @@
     aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: 50% 25%;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.08);
   }
   .frame::after{
     content: "🤍";
@@ -488,7 +487,7 @@
     bottom: -6px;
     right: -6px;
     font-size: 26px;
-    filter: drop-shadow(0 4px 6px rgba(74,62,86,0.25));
+    filter: drop-shadow(0 4px 6px rgba(74,62,86,0.18));
   }
   .sticker{
     position: absolute;
@@ -502,7 +501,7 @@
     padding: 6px 10px;
     border-radius: 999px;
     transform: rotate(-8deg);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.4);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15), inset 0 1px 1px rgba(255,255,255,0.4);
   }
 
   .card{
@@ -510,8 +509,8 @@
     border-radius: 22px;
     padding: 26px 22px 24px;
     text-align: left;
-    box-shadow: 0 25px 50px -10px rgba(74,62,86,0.22), 0 10px 20px -5px rgba(0,0,0,0.08), inset 0 2px 4px rgba(255,255,255,0.9);
-    border: 1px solid rgba(255,255,255,0.8);
+    box-shadow: 0 25px 50px -10px rgba(74,62,86,0.15), 0 10px 20px -5px rgba(0,0,0,0.05), inset 0 2px 4px rgba(255,255,255,0.9);
+    border: 1px solid rgba(255,255,255,0.9);
     position: relative;
   }
   .card p{
@@ -528,7 +527,7 @@
     line-height: 0;
     display: block;
     margin-bottom: 8px;
-    text-shadow: 0 2px 4px rgba(74,62,86,0.1);
+    text-shadow: 0 2px 4px rgba(74,62,86,0.08);
   }
   .signoff{
     font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
@@ -699,7 +698,7 @@
 
   // ---------- CONFETTI ----------
   function burstConfetti(n){
-    const colors = ['#d8b8e8','#e8a0ca','#f47cae','#fbd5e5','#ffffff'];
+    const colors = ['#f3d7ea','#f79eb5','#fce2eb','#faeff7','#ffffff'];
     for(let i=0;i<n;i++){
       const c = document.createElement('div');
       c.className = 'confetti';
