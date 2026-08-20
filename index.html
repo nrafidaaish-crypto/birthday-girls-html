@@ -5,23 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday, Mba Rosy Cantikk🤍</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Fredoka:wght@600;700&family=Caveat:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Fredoka:wght@600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --lemon-sorbet: #fffabf;
-    --bunny-tail: #ffe7ff;
-    --seafair-green: #b2f9e7;
-    --changeling: #f4adcf;
-    --dried-lilac: #bfc4ff;
-    --blue-dark: #8182cd;
-    --blue-light: #b2f9e7;
-    --lavender: #bfc4ff;
-    --pink-light: #ffe7ff;
-    --pink-mid: #e88bb9;
-    --purple-mid: #bfc4ff;
-    --cream: #fffdfa;
+    /* Gradasi dari foto pertama: Soft Lilac, Rosy Pink, Pastel Lavender */
+    --bg-grad-1: #d8b8e8;
+    --bg-grad-2: #e8a0ca;
+    --bg-grad-3: #f47cae;
+    --bg-grad-4: #fbd5e5;
+    
+    --pink-mid: #d95b96;
     --text-dark: #4a3e56;
+    --cream: #fffdfa;
     --white: #ffffff;
+    --blue-dark: #7a68a6;
   }
 
   *{ box-sizing: border-box; }
@@ -30,8 +27,9 @@
     margin: 0;
     padding: 0;
     min-height: 100%;
-    background: linear-gradient(135deg, var(--dried-lilac) 0%, var(--seafair-green) 25%, var(--lemon-sorbet) 50%, var(--changeling) 75%, var(--bunny-tail) 100%) fixed;
-    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(160deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 35%, var(--bg-grad-3) 70%, var(--bg-grad-4) 100%) fixed;
+    /* Font kecil/body menggunakan Vintage Moon (Charm) */
+    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
     color: var(--text-dark);
     overflow-x: hidden;
   }
@@ -70,7 +68,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--dried-lilac) 0%, var(--seafair-green) 25%, var(--lemon-sorbet) 50%, var(--changeling) 75%, var(--bunny-tail) 100%);
+    background: linear-gradient(160deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 35%, var(--bg-grad-3) 70%, var(--bg-grad-4) 100%);
     text-align: center;
     padding: 24px;
     transition: opacity 0.6s ease, visibility 0.6s ease;
@@ -109,8 +107,10 @@
     text-shadow: 0 2px 6px rgba(255,255,255,0.7), 0 1px 2px rgba(74,62,86,0.15);
   }
   .intro-sub{
-    font-size: 13.5px;
-    color: rgba(74,62,86,0.85);
+    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: rgba(74,62,86,0.9);
     margin-bottom: 22px;
     text-shadow: 0 1px 2px rgba(255,255,255,0.8);
   }
@@ -120,9 +120,9 @@
     border: none;
     padding: 12px 26px;
     border-radius: 999px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 0.5px;
     cursor: pointer;
     box-shadow: 0 12px 24px rgba(74,62,86,0.3), inset 0 2px 2px rgba(255,255,255,0.3), inset 0 -3px 0 rgba(0,0,0,0.2);
@@ -167,7 +167,7 @@
     to{ transform: translateY(105vh) rotate(540deg); opacity: 0.2; }
   }
 
-  /* ---------- GAME SCREEN (after intro, before letter) ---------- */
+  /* ---------- GAME SCREEN ---------- */
   #gameScreen{
     position: relative;
     z-index: 1;
@@ -182,12 +182,11 @@
     text-align: center;
     transition: opacity 0.5s ease, visibility 0.5s ease;
   }
-  #gameScreen.hidden{
-    display: none;
-  }
+  #gameScreen.hidden{ display: none; }
+
   .game-eyebrow{
     font-family: 'Lobster Two', cursive;
-    font-size: 18px;
+    font-size: 20px;
     color: var(--pink-mid);
     font-weight: 700;
     margin-bottom: 4px;
@@ -201,8 +200,9 @@
     text-shadow: 0 2px 4px rgba(255,255,255,0.8), 0 1px 2px rgba(74,62,86,0.12);
   }
   .game-sub{
-    font-size: 13px;
-    color: rgba(74,62,86,0.75);
+    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
+    font-size: 16px;
+    color: rgba(74,62,86,0.85);
     margin: 0 0 16px;
     text-shadow: 0 1px 2px rgba(255,255,255,0.8);
   }
@@ -233,7 +233,8 @@
   }
   .pop-msg{
     position: absolute;
-    font-size: 12px;
+    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
+    font-size: 15px;
     font-weight: 700;
     color: var(--pink-mid);
     pointer-events: none;
@@ -244,10 +245,7 @@
     from{ opacity: 1; transform: translateY(0) scale(1); }
     to{ opacity: 0; transform: translateY(-24px) scale(1.4); }
   }
-  .progress-wrap{
-    width: 100%;
-    margin-top: 16px;
-  }
+  .progress-wrap{ width: 100%; margin-top: 16px; }
   .progress-bar{
     width: 100%;
     height: 12px;
@@ -265,20 +263,22 @@
     box-shadow: inset 0 1px 2px rgba(255,255,255,0.5);
   }
   .progress-label{
-    font-size: 12.5px;
+    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
+    font-size: 16px;
     font-weight: 700;
     margin-top: 6px;
     color: var(--text-dark);
     text-shadow: 0 1px 2px rgba(255,255,255,0.8);
   }
   .game-hint{
-    font-size: 12px;
-    color: rgba(74,62,86,0.65);
+    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
+    font-size: 15px;
+    color: rgba(74,62,86,0.75);
     margin-top: 10px;
     text-shadow: 0 1px 2px rgba(255,255,255,0.8);
   }
 
-  /* ---------- ENVELOPE / OPEN-LETTER SCREEN (after game, before message) ---------- */
+  /* ---------- ENVELOPE SCREEN ---------- */
   #envelopeScreen{
     position: relative;
     z-index: 1;
@@ -292,12 +292,11 @@
     padding: 30px 20px;
     text-align: center;
   }
-  #envelopeScreen.hidden{
-    display: none;
-  }
+  #envelopeScreen.hidden{ display: none; }
+
   .env-eyebrow{
     font-family: 'Lobster Two', cursive;
-    font-size: 18px;
+    font-size: 20px;
     color: var(--pink-mid);
     font-weight: 700;
     margin-bottom: 4px;
@@ -341,7 +340,7 @@
     left: 0;
     width: 100%;
     height: 78px;
-    background: var(--pink-light);
+    background: #fce1ec;
     clip-path: polygon(0 0, 100% 0, 50% 68%);
     border-radius: 10px 10px 0 0;
     transform-origin: top center;
@@ -349,16 +348,14 @@
     z-index: 3;
     filter: drop-shadow(0 2px 4px rgba(74,62,86,0.15));
   }
-  .envelope-wrap.opened .envelope-flap{
-    transform: rotateX(180deg);
-  }
+  .envelope-wrap.opened .envelope-flap{ transform: rotateX(180deg); }
   .envelope-shadow-tri{
     position: absolute;
     top: 24px;
     left: 0;
     width: 100%;
     height: 60px;
-    background: rgba(204,142,177,0.35);
+    background: rgba(217,91,150,0.25);
     clip-path: polygon(0 0, 100% 0, 50% 100%);
     z-index: 1;
   }
@@ -375,8 +372,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Caveat', cursive;
-    font-size: 22px;
+    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
     color: var(--pink-mid);
     transition: transform 0.7s ease 0.25s, top 0.7s ease 0.25s;
   }
@@ -407,19 +405,17 @@
     transform: translate(-50%, -50%) scale(0.4);
   }
   .env-hint{
-    font-size: 13px;
-    color: rgba(74,62,86,0.75);
+    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
+    font-size: 16px;
+    color: rgba(74,62,86,0.85);
     opacity: 0;
     animation: fadeUp 0.7s ease forwards;
     animation-delay: 0.6s;
     text-shadow: 0 1px 2px rgba(255,255,255,0.8);
   }
-  .env-hint.tap-again{
-    font-weight: 700;
-    color: var(--pink-mid);
-  }
+  .env-hint.tap-again{ font-weight: 700; color: var(--pink-mid); }
 
-  /* ---------- MAIN CONTENT (revealed after envelope opens) ---------- */
+  /* ---------- MAIN CONTENT ---------- */
   main{
     position: relative;
     z-index: 1;
@@ -429,9 +425,7 @@
     text-align: center;
     display: none;
   }
-  main.revealed{
-    display: block;
-  }
+  main.revealed{ display: block; }
   main.revealed .fade-in{
     opacity: 0;
     animation: fadeUp 0.8s ease forwards;
@@ -444,7 +438,7 @@
 
   .eyebrow{
     font-family: 'Lobster Two', cursive;
-    font-size: 20px;
+    font-size: 22px;
     color: var(--pink-mid);
     font-weight: 700;
     text-shadow: 0 1px 2px rgba(255,255,255,0.8);
@@ -502,8 +496,9 @@
     left: -14px;
     background: var(--blue-dark);
     color: var(--white);
+    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 14px;
     padding: 6px 10px;
     border-radius: 999px;
     transform: rotate(-8deg);
@@ -520,8 +515,9 @@
     position: relative;
   }
   .card p{
-    font-size: 15.5px;
-    line-height: 1.75;
+    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
     margin: 0 0 14px;
   }
   .card p:last-child{ margin-bottom: 0; }
@@ -535,8 +531,9 @@
     text-shadow: 0 2px 4px rgba(74,62,86,0.1);
   }
   .signoff{
-    font-family: 'Caveat', cursive;
-    font-size: 30px;
+    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
     color: var(--pink-mid);
     text-align: right;
     margin-top: 16px !important;
@@ -545,8 +542,9 @@
 
   .footer-note{
     margin-top: 28px;
-    font-size: 12.5px;
-    color: rgba(74,62,86,0.7);
+    font-family: 'Vintage Moon', 'Charm', cursive, sans-serif;
+    font-size: 15px;
+    color: rgba(74,62,86,0.75);
     text-shadow: 0 1px 2px rgba(255,255,255,0.8);
   }
   .footer-note span{ color: var(--pink-mid); }
@@ -559,8 +557,7 @@
 </head>
 <body class="locked">
 
-<!-- ============ BACKSOUND ============
-     File musiknya: audio/Dancing Queen ABBA.mp3 -->
+<!-- ============ BACKSOUND ============ -->
 <audio id="bgm" loop preload="auto">
   <source src="audio/dancingqueen.mp3" type="audio/mpeg">
 </audio>
@@ -638,7 +635,7 @@
   const bgm = document.getElementById('bgm');
   const musicToggle = document.getElementById('musicToggle');
   let musicOn = true;
-  bgm.volume = 0; // mulai dari 0 buat efek fade-in
+  bgm.volume = 0;
 
   function fadeAudioIn(target = 0.6, duration = 1200){
     const steps = 20;
@@ -656,10 +653,7 @@
   function playBgm(){
     bgm.play().then(() => {
       fadeAudioIn();
-    }).catch(() => {
-      // beberapa browser (terutama di HP) butuh interaksi user dulu.
-      // tombol musik tetep bisa dipencet manual buat nyalain.
-    });
+    }).catch(() => {});
   }
 
   musicToggle.addEventListener('click', () => {
@@ -705,7 +699,7 @@
 
   // ---------- CONFETTI ----------
   function burstConfetti(n){
-    const colors = ['#8182cd','#b2f9e7','#bfc4ff','#ffe7ff','#e88bb9','#fffabf'];
+    const colors = ['#d8b8e8','#e8a0ca','#f47cae','#fbd5e5','#ffffff'];
     for(let i=0;i<n;i++){
       const c = document.createElement('div');
       c.className = 'confetti';
@@ -718,7 +712,7 @@
     }
   }
 
-  // ---------- MINI GAME: pecahin 15 balon ----------
+  // ---------- GAME: 15 BALON ----------
   const stage = document.getElementById('gameStage');
   const poppedEl = document.getElementById('popped');
   const progressFill = document.getElementById('progressFill');
@@ -756,9 +750,7 @@
       setTimeout(() => msg.remove(), 700);
       b.remove();
 
-      if(popped >= TARGET){
-        finishGame();
-      }
+      if(popped >= TARGET){ finishGame(); }
     });
 
     setTimeout(() => { if(b.parentNode) b.remove(); }, dur*1000 + 50);
@@ -783,7 +775,7 @@
     }, 700);
   }
 
-  // ---------- ENVELOPE / OPEN-LETTER TRANSITION ----------
+  // ---------- ENVELOPE ----------
   const envelopeScreen = document.getElementById('envelopeScreen');
   const envelopeWrap = document.getElementById('envelopeWrap');
   const envHint = document.getElementById('envHint');
