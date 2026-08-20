@@ -6,10 +6,10 @@
 <title>Happy Birthday, Mba Rosy Cantikk🤍</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Great+Vibes&family=Mali:ital,wght@0,500;0,600;0,700;1,600&family=Nunito:ital,wght@0,500;0,600;0,700;1,600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Great+Vibes&family=Mali:ital,wght@0,400;0,600;0,700;1,500;1,600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
 <style>
   :root{
-    /* Warna gradasi background utama (TIDAK DIUBAH) */
+    /* Warna gradasi background utama */
     --bg-grad-1: #f3d7ea;
     --bg-grad-2: #f79eb5;
     --bg-grad-3: #fce2eb;
@@ -27,9 +27,9 @@
     --blue-dark: #826eab;
 
     /* Font Definitions */
-    --font-cute: 'Nunito', sans-serif;
+    --font-valentine: 'Mali', cursive, sans-serif; /* Font Cute Valentine */
     --font-elegant: 'Playfair Display', serif;
-    --font-script: 'Charm', cursive;
+    --font-love: 'Great Vibes', cursive; /* Font Elegan "Love" */
   }
 
   *{ box-sizing: border-box; }
@@ -39,7 +39,7 @@
     padding: 0;
     min-height: 100%;
     background: linear-gradient(150deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 38%, var(--bg-grad-3) 72%, var(--bg-grad-4) 100%) fixed;
-    font-family: var(--font-cute);
+    font-family: var(--font-valentine);
     color: var(--text-dark);
     overflow-x: hidden;
   }
@@ -117,16 +117,29 @@
     0%, 100%{ opacity: 0.3; transform: scale(0.8); }
     50%{ opacity: 1; transform: scale(1.1); }
   }
+  
+  /* Container Kado Foto */
   .gift{
-    font-size: 78px;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
     animation: bounce 1.6s ease-in-out infinite;
     cursor: pointer;
     filter: drop-shadow(0 18px 22px rgba(122, 12, 46, 0.3));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gift img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   @keyframes bounce{
     0%, 100%{ transform: translateY(0) rotate(-3deg); }
     50%{ transform: translateY(-14px) rotate(3deg); }
   }
+
   .intro-text{
     font-family: var(--font-elegant);
     font-size: 26px;
@@ -137,7 +150,7 @@
     text-shadow: 0 2px 6px rgba(255,255,255,0.8);
   }
   .intro-sub{
-    font-family: var(--font-cute);
+    font-family: var(--font-valentine);
     font-size: 15px;
     font-weight: 600;
     color: var(--maroon-dark);
@@ -216,10 +229,10 @@
   #gameScreen.hidden{ display: none; }
 
   .game-eyebrow{
-    font-family: var(--font-cute);
-    font-size: 16px;
+    font-family: var(--font-valentine);
+    font-size: 15px;
     color: var(--maroon);
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 4px;
   }
   .game-title{
@@ -231,8 +244,8 @@
     text-shadow: 0 2px 4px rgba(255,255,255,0.9);
   }
   .game-sub{
-    font-family: var(--font-cute);
-    font-size: 15px;
+    font-family: var(--font-valentine);
+    font-size: 14px;
     color: var(--text-dark);
     margin: 0 0 16px;
   }
@@ -263,9 +276,9 @@
   }
   .pop-msg{
     position: absolute;
-    font-family: var(--font-cute);
+    font-family: var(--font-valentine);
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--maroon);
     pointer-events: none;
     animation: popFade 0.7s ease forwards;
@@ -292,21 +305,21 @@
     transition: width 0.25s ease;
   }
   .progress-label{
-    font-family: var(--font-cute);
+    font-family: var(--font-valentine);
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 600;
     margin-top: 6px;
     color: var(--maroon);
   }
   .game-hint{
-    font-family: var(--font-cute);
+    font-family: var(--font-valentine);
     font-size: 14px;
     color: var(--text-dark);
     margin-top: 10px;
     opacity: 0.85;
   }
 
-  /* ---------- ENVELOPE SCREEN (MAROON & ELEGANT) ---------- */
+  /* ---------- ENVELOPE SCREEN ---------- */
   #envelopeScreen{
     position: relative;
     z-index: 1;
@@ -323,10 +336,10 @@
   #envelopeScreen.hidden{ display: none; }
 
   .env-eyebrow{
-    font-family: var(--font-cute);
-    font-size: 16px;
+    font-family: var(--font-valentine);
+    font-size: 15px;
     color: var(--maroon);
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 4px;
     opacity: 0;
     animation: fadeUp 0.7s ease forwards;
@@ -344,11 +357,10 @@
     text-shadow: 0 2px 4px rgba(255,255,255,0.9);
   }
 
-  /* Envelope Maroon Container */
   .envelope-wrap{
     position: relative;
-    width: 250px;
-    height: 170px;
+    width: 260px;
+    height: 180px;
     margin: 0 auto 30px;
     opacity: 0;
     animation: fadeUp 0.7s ease forwards;
@@ -370,7 +382,7 @@
     top: 30px;
     left: 0;
     width: 100%;
-    height: 85px;
+    height: 90px;
     background: linear-gradient(180deg, var(--maroon-light) 0%, var(--maroon) 100%);
     clip-path: polygon(0 0, 100% 0, 50% 68%);
     border-radius: 12px 12px 0 0;
@@ -392,49 +404,61 @@
     z-index: 1;
   }
 
-  /* Surat bergaya Foto Pertama */
+  /* Surat Meliuk-Liuk / Scalloped Edge (Foto 4) */
   .envelope-letter{
     position: absolute;
     left: 10px;
     right: 10px;
     top: 18px;
-    height: 200px;
-    background: var(--cream);
-    border: 2px dashed var(--maroon-light);
-    border-radius: 10px;
+    height: 220px;
+    background: #fffdfa;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 16px;
+    justify-content: flex-end; /* Teks dikebawahin */
+    padding: 30px 16px 28px;
     transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), top 0.8s ease;
+
+    /* Efek Meliuk-Liuk / Scalloped Edge Border */
+    --g: #0000 98%,#000;
+    --s: 12px 12px;
+    -webkit-mask:
+      radial-gradient(5px at 50% 0, var(--g)) 0 0/var(--s) repeat-x,
+      radial-gradient(5px at 50% 100%, var(--g)) 0 100%/var(--s) repeat-x,
+      radial-gradient(5px at 0 50%, var(--g)) 0 0/var(--s) repeat-y,
+      radial-gradient(5px at 100% 50%, var(--g)) 100% 0/var(--s) repeat-y,
+      linear-gradient(#000 0 0) center/calc(100% - 10px) calc(100% - 10px) no-repeat;
+    mask:
+      radial-gradient(5px at 50% 0, var(--g)) 0 0/var(--s) repeat-x,
+      radial-gradient(5px at 50% 100%, var(--g)) 0 100%/var(--s) repeat-x,
+      radial-gradient(5px at 0 50%, var(--g)) 0 0/var(--s) repeat-y,
+      radial-gradient(5px at 100% 50%, var(--g)) 100% 0/var(--s) repeat-y,
+      linear-gradient(#000 0 0) center/calc(100% - 10px) calc(100% - 10px) no-repeat;
   }
+
   .envelope-wrap.opened .envelope-letter{
-    top: -140px;
+    top: -150px;
     transform: translateY(-20px) scale(1.05);
     z-index: 10;
   }
 
+  /* Font Elegan untuk Tulisan Amplop (Foto 5) */
   .letter-header-text{
-    font-family: var(--font-elegant);
-    font-size: 20px;
-    font-weight: 700;
+    font-family: var(--font-love);
+    font-size: 30px;
+    font-weight: 500;
     color: var(--maroon);
-    letter-spacing: 1px;
-    margin-bottom: 6px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    margin-bottom: 4px;
   }
   .letter-to-text{
-    font-family: var(--font-cute);
-    font-size: 14px;
-    font-weight: 700;
+    font-family: var(--font-valentine);
+    font-size: 13px;
+    font-weight: 600;
     color: var(--maroon-light);
-    margin-bottom: 8px;
-  }
-  .letter-stamp-icon{
-    font-size: 26px;
-    margin-bottom: 4px;
   }
 
   .envelope-seal{
@@ -462,8 +486,8 @@
   }
 
   .env-hint{
-    font-family: var(--font-cute);
-    font-size: 16px;
+    font-family: var(--font-valentine);
+    font-size: 15px;
     font-weight: 600;
     color: var(--maroon);
     opacity: 0;
@@ -493,18 +517,11 @@
     to{ opacity: 1; transform: translateY(0); }
   }
 
-  .eyebrow{
-    font-family: var(--font-cute);
-    font-size: 16px;
-    color: var(--maroon);
-    font-weight: 700;
-  }
-
   h1{
     font-family: var(--font-elegant);
     font-size: 46px;
     line-height: 1.15;
-    margin: 6px 0 4px;
+    margin: 10px 0 4px;
     color: var(--maroon);
     text-shadow: 0 4px 10px rgba(122, 12, 46, 0.15), 0 2px 0 rgba(255,255,255,0.9);
   }
@@ -546,20 +563,6 @@
     font-size: 26px;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
   }
-  .sticker{
-    position: absolute;
-    top: -14px;
-    left: -14px;
-    background: linear-gradient(135deg, var(--maroon-light), var(--maroon));
-    color: var(--white);
-    font-family: var(--font-cute);
-    font-weight: 700;
-    font-size: 13px;
-    padding: 6px 12px;
-    border-radius: 999px;
-    transform: rotate(-8deg);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-  }
 
   .card{
     background: var(--cream);
@@ -600,10 +603,10 @@
 
   .footer-note{
     margin-top: 28px;
-    font-family: var(--font-cute);
+    font-family: var(--font-valentine);
     font-size: 14px;
     color: var(--text-dark);
-    opacity: 0.8;
+    opacity: 0.85;
   }
   .footer-note span{ color: var(--maroon-light); }
 
@@ -633,7 +636,12 @@
   <span class="intro-sparkle" style="top:24%; right:14%; animation-delay:0.6s;">💗</span>
   <span class="intro-sparkle" style="bottom:22%; left:18%; animation-delay:1.1s;">🎀</span>
   <span class="intro-sparkle" style="bottom:26%; right:16%; animation-delay:0.3s;">✨</span>
-  <div class="gift" id="giftBtn">🎁</div>
+  
+  <!-- Kotak Hadiah Berbentuk Gambar (bisa diganti foto/file kamu) -->
+  <div class="gift" id="giftBtn">
+    <img src="kado.png" alt="Kado" id="giftImg">
+  </div>
+
   <p class="intro-text">psst... ada kejutan nih buat mbaa rosyy 👀</p>
   <p class="intro-sub">pelan-pelan bukanya ya, banyak cinta di dalemnya</p>
   <button class="intro-btn" id="openBtn">buka kadonya 🎀</button>
@@ -671,9 +679,9 @@
   <p class="env-eyebrow">horeee, 15 balon udah abis!</p>
   <p class="env-title">ada surat buat kamu 💌</p>
   <div class="envelope-wrap" id="envelopeWrap">
+    <!-- Surat Meliuk-Liuk dengan Tulisan Elegan -->
     <div class="envelope-letter">
-      <div class="letter-stamp-icon">💌</div>
-      <div class="letter-header-text">A LOVE LETTER</div>
+      <div class="letter-header-text">a love letter for the beautiful girl</div>
       <div class="letter-to-text">buat mba cantik🤍</div>
     </div>
     <div class="envelope-shadow-tri"></div>
@@ -692,12 +700,10 @@
   <div class="corner-decor bottom-left">🌺 🦋</div>
   <div class="corner-decor bottom-right">🦋 🌸</div>
 
-  <p class="eyebrow fade-in" style="animation-delay:0.1s">buat kamu, hari ini</p>
   <h1 class="fade-in" style="animation-delay:0.25s">Happy Birthday</h1>
   <p class="name fade-in" style="animation-delay:0.4s">mbaa 🤍</p>
 
   <div class="frame-wrap fade-in" style="animation-delay:0.55s">
-    <div class="sticker">yay!! 🎀</div>
     <div class="frame">
       <img src="cantik.jpg" alt="Foto ulang tahun">
     </div>
