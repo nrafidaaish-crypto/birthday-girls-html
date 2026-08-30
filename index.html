@@ -705,29 +705,20 @@
 </main>
 
 <script>
-  // BACKSOUND
+    // BACKSOUND
   const bgm = document.getElementById('bgm');
   const musicToggle = document.getElementById('musicToggle');
   let musicOn = true;
-  bgm.volume = 0;
-
-  function fadeAudioIn(target = 0.6, duration = 1200){
-    const steps = 20;
-    const stepTime = duration / steps;
-    const stepVal = target / steps;
-    let i = 0;
-    clearInterval(bgm._fadeTimer);
-    bgm._fadeTimer = setInterval(() => {
-      i++;
-      bgm.volume = Math.min(target, +(stepVal * i).toFixed(3));
-      if(i >= steps) clearInterval(bgm._fadeTimer);
-    }, stepTime);
-  }
+  
+  // Atur volume awal langsung ke 0.6 (60%) agar tidak nyangkut di 0
+  bgm.volume = 0.6;
 
   function playBgm(){
     bgm.play().then(() => {
-      fadeAudioIn();
-    }).catch(() => {});
+      // Audio berhasil diputar
+    }).catch((err) => {
+      console.log("Audio tertahan oleh browser", err);
+    });
   }
 
   musicToggle.addEventListener('click', () => {
@@ -740,6 +731,7 @@
     }
     musicOn = !musicOn;
   });
+
 
   // INTRO
   const intro = document.getElementById('intro');
