@@ -398,7 +398,6 @@
     z-index: 1;
   }
 
-  /* Surat Bergerigi & Pengaturan Teks di Tengah */
   .envelope-letter{
     position: absolute;
     left: 10px;
@@ -416,7 +415,6 @@
     padding: 35px 20px 20px;
     transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), top 0.8s ease;
 
-    /* Efek Bergerigi / Scalloped Edge */
     --g: #0000 98%,#000;
     --s: 12px 12px;
     -webkit-mask:
@@ -475,7 +473,6 @@
     transform: translate(-50%, -50%) scale(0.4);
   }
 
-  /* Posisikan teks petunjuk agar lebih ke bawah lagi */
   .env-hint{
     font-family: var(--font-valentine);
     font-size: 15px;
@@ -484,7 +481,7 @@
     opacity: 0;
     animation: fadeUp 0.7s ease forwards;
     animation-delay: 0.6s;
-    margin-top: 85px; /* Diturunkan lebih jauh dari bawah amplop */
+    margin-top: 85px;
   }
   .env-hint.tap-again{ font-weight: 700; color: var(--maroon-light); }
 
@@ -611,7 +608,7 @@
 
 <!-- BACKSOUND -->
 <audio id="bgm" loop preload="auto">
-  <source src="audio/Slipping Through My Fingers.mp3" type="audio/mpeg">
+  <source src="Slipping%20Through%20My%20Fingers.mp3" type="audio/mpeg">
 </audio>
 <button id="musicToggle" title="Musik">🔊</button>
 
@@ -705,19 +702,19 @@
 </main>
 
 <script>
-    // BACKSOUND
+  // BACKSOUND
   const bgm = document.getElementById('bgm');
   const musicToggle = document.getElementById('musicToggle');
   let musicOn = true;
   
-  // Atur volume awal langsung ke 0.6 (60%) agar tidak nyangkut di 0
+  // Set volume langsung ke 60%
   bgm.volume = 0.6;
 
   function playBgm(){
     bgm.play().then(() => {
-      // Audio berhasil diputar
+      musicToggle.textContent = '🔊';
     }).catch((err) => {
-      console.log("Audio tertahan oleh browser", err);
+      console.log("Autoplay diblokir oleh browser:", err);
     });
   }
 
@@ -731,7 +728,6 @@
     }
     musicOn = !musicOn;
   });
-
 
   // INTRO
   const intro = document.getElementById('intro');
